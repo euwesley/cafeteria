@@ -1,0 +1,2 @@
+Acessar o shell e configurar o proxy utilizando
+$ git config --global http.proxy meu.servidor:8080
