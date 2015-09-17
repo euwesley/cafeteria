@@ -5,7 +5,7 @@ package bebida;
  */
 public class Cafe extends Bebida {
     public Cafe() {
-        this.setNome("Café");
+        this.setNome("Cafe");
     }
 
     @Override
