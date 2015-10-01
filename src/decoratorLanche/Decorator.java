@@ -7,4 +7,5 @@ import lanche.Lanche;
  */
 public abstract class Decorator extends Lanche {
     public abstract String getNome();
+
 }

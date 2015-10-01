@@ -24,4 +24,5 @@ public class Salada extends Decorator {
     public double custo() {
         return (this.x.custo()+0.50);
     }
+
 }
