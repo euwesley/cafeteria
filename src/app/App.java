@@ -3,6 +3,11 @@ package app;
 import bebida.Bebida;
 import bebida.Cafe;
 import decorator.Chantilly;
+import decoratorLanche.Bacon;
+import decoratorLanche.Calabresa;
+import lanche.Lanche;
+import lanche.Xcalabresa;
+import lanche.Xsalada;
 import pagamento.CartaoDeCredito;
 import pagamento.Dinheiro;
 import pagamento.Pagamento;
@@ -17,7 +22,7 @@ public class App {
         Bebida cafe = new Cafe();
 
 
-        Pedido pedido = new Pedido();
+        /*Pedido pedido = new Pedido();
         Pagamento pagamento = new Dinheiro();
         pedido.addItem(cafe);
 
@@ -35,7 +40,20 @@ public class App {
         pedido.fecharPedido();
         pagamento = new CartaoDeCredito();
         pedido.pagar(pagamento);
+        System.out.println("------- Fechado!----------");*/
+
+        Lanche x = new Xsalada();
+        x.prepararLanche();
+        System.out.println("Nome: " + x.getNome() + " Custo: R$" + x.custo());
+        x = new Bacon(x);
+        System.out.println("Nome: "+x.getNome()+" Custo: R$"+x.custo());
         System.out.println("------- Fechado!----------");
+        Lanche s = new Xcalabresa();
+        s.prepararLanche();
+        System.out.println("Nome: " + s.getNome() + " Custo: R$" + s.custo());
+        s = new Calabresa(s);
+        System.out.println("Nome: " + s.getNome() + " Custo: R$" + s.custo());
+
 
 
 
